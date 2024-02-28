@@ -1,5 +1,7 @@
 public class Main {
     public static void main(String[] args) {
+
+
         //ЗАДАНИЕ1
         System.out.println("ЗАДАНИЕ1");
         int month = 1;
