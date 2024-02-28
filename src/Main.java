@@ -5,8 +5,9 @@ public class Main {
         int month = 1;
         int vklad = 29000;
         int summaNakopleniy =0;
-        while (month<12){
-            summaNakopleniy *= 1.12;
+        double procent = 1.12;
+        while (summaNakopleniy<2459000){
+            summaNakopleniy *= procent;
             summaNakopleniy += vklad;
             System.out.println("Месяц "+month+", сумма накоплений равна "+summaNakopleniy+" рублей");
             month+=1;
@@ -35,9 +36,11 @@ public class Main {
         //ЗАДАНИЕ4
         System.out.println("ЗАДАНИЕ4");
         int mounth = 1;
+        int itog = 12000000;
         int summaNakop = 15000;
-        while(summaNakop<12000000){
-            summaNakop += summaNakop/100*7;
+        double pproc = 1.07;
+        while(summaNakop<itog){
+            summaNakop *= pproc;
             mounth += 1;
             System.out.println("Месяц " + mounth + " сумма накоплений составляет " + summaNakop);
         }
@@ -45,7 +48,7 @@ public class Main {
         System.out.println("ЗАДАНИЕ5");
         mounth = 1;
         summaNakop = 15000;
-        while(summaNakop<12000000) {
+        while(summaNakop<itog) {
             summaNakop += summaNakop / 100 * 7;
             mounth += 1;
             if (mounth % 6==0) {
@@ -55,8 +58,9 @@ public class Main {
         //ЗАДАНИЕ6
         System.out.println("ЗАДАНИЕ6");
         mounth = 1;
-        int year = mounth/12;
-        while(year<9){
+        int vsegoLet = 9
+        int year = 0;
+        while(year<vsegoLet){
             mounth += 1;
             year = mounth/12;
             if(mounth % 6==0){
@@ -79,7 +83,7 @@ public class Main {
         int yearOfBegining = currentYear-200;
         int periodOfComet = 79;
         while(yearOfComet<yearOfEnd){
-            if((yearOfComet>=yearOfBegining)&&(yearOfComet<=yearOfEnd)){
+            if(yearOfComet>=yearOfBegining){
                 System.out.println(yearOfComet);
             }
             yearOfComet += periodOfComet;
